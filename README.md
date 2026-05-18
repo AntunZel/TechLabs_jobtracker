@@ -41,7 +41,7 @@ You will see:
 
 ---
 
-## 3. Set your Anthropic API key
+## 3. Set your Anthropic API key - only if you're using the "server.py" file - the one with paid API - currently doesn't work
 
 The LLM suggestion endpoint needs a valid API key.
 Get one at https://console.anthropic.com
@@ -60,6 +60,10 @@ $env:ANTHROPIC_API_KEY="sk-ant-..."
 
 ```bash
 uvicorn server:app --reload --port 8000
+```
+or
+```bash
+uvicorn server_noapi:app --reload --port 8000
 ```
 
 The API is now live at http://localhost:8000
